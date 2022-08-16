@@ -5,6 +5,40 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Plaese Log-In</title>
+		<!-- !tailwind CDN -->
+		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
-	<body></body>
+	<body>
+		<header>
+			<h2 class="text-6xl text-center mt-12 font-bold">
+				Well Come To <span class="text-lime-600">Bap Er Bank</span>
+			</h2>
+		</header>
+		<main>
+			<section>
+				<div class="w-9/12 bg-sky-300 mx-auto mt-12 p-10">
+					<input
+						id="user-email"
+						class="w-9/12 block px-5 mb-3 rounded"
+						type="email"
+						name=""
+						placeholder="Your-Email"
+					/>
+					<input
+						id="user-password"
+						class="w-9/12 block px-5 mb-3 rounded"
+						type="password"
+						name=""
+						placeholder="Your-password"
+					/>
+					<button
+						id="user-btn"
+						class="bg-sky-600 px-5 py-2 rounded-lg text-white font-bold mt-2 hover:bg-sky-700"
+					>
+						Submit
+					</button>
+				</div>
+			</section>
+		</main>
+	</body>
 </html>
