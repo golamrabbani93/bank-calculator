@@ -17,7 +17,7 @@
 				<div class="grid grid-cols-3 w-9/12 mx-auto grid-flow-col gap-4 text-white">
 					<div class="bg-pink-600 text-center py-5 rounded-lg">
 						<h2 class="text-3xl uppercase font-semibold pb-2">deposit</h2>
-						<h1 id="total-deposit" class="text-6xl uppercase font-semibold">$<span>00</span></h1>
+						<h1 class="text-6xl uppercase font-semibold">$<span id="total-deposit">00</span></h1>
 					</div>
 					<div class="bg-fuchsia-600 text-center py-5 rounded-lg">
 						<h2 class="text-3xl uppercase font-semibold pb-2">Withdraw</h2>
@@ -25,13 +25,13 @@
 					</div>
 					<div class="bg-purple-600 text-center py-5 rounded-lg">
 						<h2 class="text-3xl uppercase font-semibold pb-2">balance</h2>
-						<h1 id="total-balance" class="text-6xl uppercase font-semibold">$<span>1240</span></h1>
+						<h1 class="text-6xl uppercase font-semibold">$<span  id="total-balance">1240</spa></h1>
 					</div>
 				</div>
 			</section>
 			<section>
 				<div class="grid grid-cols-2 mx-auto grid-flow-col gap-4">
-					<div class="w-9/12 bg-lime-600 mx-auto mt-12 p-10 rounded-lg">
+					<div class="w-9/12 bg-red-600 mx-auto mt-12 p-10 rounded-lg">
 						<h3 class="text-white font-semibold text-4xl mb-5">Plaese Deposit</h3>
 						<input
 							id="deposit-amount"
@@ -42,7 +42,7 @@
 						/>
 						<button
 							id="deposit-btn"
-							class="bg-pink-600 px-5 py-2 rounded-lg text-white font-bold mt-2 hover:bg-pink-700"
+							class="bg-indigo-600 px-5 py-2 rounded-lg text-white font-bold mt-2 hover:bg-indigo-700"
 						>
 							Deposit
 						</button>
@@ -58,7 +58,7 @@
 						/>
 						<button
 							id="withdraw-btn"
-							class="bg-pink-600 px-5 py-2 rounded-lg text-white font-bold mt-2 hover:bg-pink-700"
+							class="bg-red-600 px-5 py-2 rounded-lg text-white font-bold mt-2 hover:bg-red-700"
 						>
 							Withdraw
 						</button>
@@ -66,5 +66,7 @@
 				</div>
 			</section>
 		</main>
+		<!-- !Deposit Script -->
+		<script src="js/deposit.js"></script>
 	</body>
 </html>
