@@ -1,27 +1,19 @@
 document.getElementById("deposit-btn").addEventListener("click", function () {
-	//! get deposit input amount
-	const depositAmount = document.getElementById("deposit-amount");
-	const depositAmountString = depositAmount.value;
-	const deposit = parseFloat(depositAmountString);
+	const inputFieldText = document.getElementById("deposit-amount").value;
 
-	// !get Total Show Deposit
-	const totalDepositAmount = document.getElementById("total-deposit");
-	const totalDepositAmountString = totalDepositAmount.innerText;
-	const totalDeposit = parseFloat(totalDepositAmountString);
+	if (inputFieldText.length === 0) {
+		alert("Please Input Deposit Amount");
+	} else {
+		const inputField = getInputFieldText("deposit-amount");
 
-	// !show deposit amount to total deposit
-	const sumDeposit = totalDeposit + deposit;
-	totalDepositAmount.innerText = sumDeposit;
+		const elementText = getElementText("total-deposit");
 
-	// !get total balance
-	const totalBalance = document.getElementById("total-balance");
-	const totalBalanceString = totalBalance.innerText;
-	const balance = parseFloat(totalBalanceString);
+		const total = inputField + elementText;
+		newAmount("total-deposit", total);
 
-	// !show deposit amount to total Balance
-	const totalDepositBalance = balance + deposit;
-	totalBalance.innerText = totalDepositBalance;
+		const totalBalanceElement = getElementText("total-balance");
 
-	// !clear deposit input field
-	depositAmount.value = "";
+		const totalBalance = inputField + totalBalanceElement;
+		newAmount("total-balance", totalBalance);
+	}
 });

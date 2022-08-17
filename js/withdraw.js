@@ -1,28 +1,19 @@
 document.getElementById("withdraw-btn").addEventListener("click", function () {
-	// !get withdraw input amount
-	const withdrawAmount = document.getElementById("withdraw-amount");
-	const withdrawAmountString = withdrawAmount.value;
-	const withdraw = parseFloat(withdrawAmountString);
+	const withdrawCheck = document.getElementById("withdraw-amount").value;
 
-	// !Get show withdraw
-	const totalWithDrawAmount = document.getElementById("total-withdraw");
-	const totalWithDrawAmountString = totalWithDrawAmount.innerText;
-	const totalWithdraw = parseFloat(totalWithDrawAmountString);
+	if (withdrawCheck.length === 0) {
+		alert("Please Input Your WithDraw Amount");
+	} else {
+		const withdrawInput = getInputFieldText("withdraw-amount");
 
-	// !show withdraw amount to total withdraw
-	const sumWithdraw = withdraw + totalWithdraw;
-	totalWithDrawAmount.innerText = sumWithdraw;
+		const withdrawTotal = getElementText("total-withdraw");
 
-	// !get total balance
-	const totalBalance = document.getElementById("total-balance");
-	const totalBalanceString = totalBalance.innerText;
-	const balance = parseFloat(totalBalanceString);
-	console.log(balance);
+		const total = withdrawInput + withdrawTotal;
 
-	// !show withdraw amount from total Balance
-	const totalWithDrawBalance = balance - withdraw;
-	totalBalance.innerText = totalWithDrawBalance;
+		newAmount("total-withdraw", total);
 
-	// !clear withdraw input field
-	withdrawAmount.value = "";
+		const totalBalance = getElementText("total-balance");
+		const Balance = totalBalance - withdrawInput;
+		newAmount("total-balance", Balance);
+	}
 });
